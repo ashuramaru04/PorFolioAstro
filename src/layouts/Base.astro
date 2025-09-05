@@ -1,0 +1,40 @@
+---
+// src/layouts/Base.astro
+const { title = 'Ashura | Backend Java', description = 'Portafolio de proyectos backend con Java (Spring, SQL, Cloud).', } = Astro.props
+---
+<!doctype html>
+<html lang="es" class="min-h-full bg-[--color-bg] text-white">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="icon" href="/favicon.svg" />
+</head>
+<body class="min-h-dvh antialiased">
+<header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/30">
+<nav class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+<a href="/" class="font-bold tracking-tight">Ashura.dev</a>
+<ul class="flex gap-6 text-sm">
+<li><a class="hover:underline" href="/sobre-mi/">Sobre mí</a></li>
+<li><a class="hover:underline" href="/proyectos/">Proyectos</a></li>
+<li><a class="hover:underline" href="/blog/">Blog</a></li>
+<li><a class="hover:underline" href="/contacto/">Contacto</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main class="mx-auto max-w-6xl px-4 py-10">
+<slot />
+</main>
+
+
+<footer class="border-t border-white/10">
+<div class="mx-auto max-w-6xl px-4 py-8 text-sm text-white/70">
+© {new Date().getFullYear()} Ashura. Hecho con Astro + Tailwind.
+</div>
+</footer>
+<link rel="stylesheet" href="/src/styles/global.css" />
+</body>
+</html>

@@ -1,13 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// src/pages/index.astro
+import Base from "../layouts/Base.astro"
 ---
-
-
-<Layout>
-	
-	<main>
-	<h1>portfolio</h1>
-	</main>
-</Layout>
-
+<Base title="Ashura | Backend Java">
+<section class="grid gap-6 md:grid-cols-2 items-center">
+<div class="space-y-4">
+<h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Backend Developer (Java)</h1>
+<p class="text-white/80">
+Diseño y desarrollo de APIs robustas con Spring, PostgreSQL, Docker y despliegue en la nube.
+</p>
+<div class="flex gap-3">
+<a href="/proyectos/" class="px-4 py-2 rounded-xl bg-[--color-primary] text-black font-medium">Ver proyectos</a>
+<a href="/cv.pdf" class="px-4 py-2 rounded-xl border border-white/20">Descargar CV</a>
+</div>
+</div>
+<div class="rounded-2xl border border-white/10 p-6">
+<ul class="grid grid-cols-2 gap-3 text-sm">
+<li class="rounded-xl border border-white/10 p-3">Java / Spring</li>
+<li class="rounded-xl border border-white/10 p-3">REST / GraphQL</li>
+<li class="rounded-xl border border-white/10 p-3">SQL / JPA</li>
+<li class="rounded-xl border border-white/10 p-3">Docker / CI-CD</li>
+<li class="rounded-xl border border-white/10 p-3">GCP / Cloud Run</li>
+<li class="rounded-xl border border-white/10 p-3">Testing</li>
+</ul>
+</div>
+</section>
+</Base>
